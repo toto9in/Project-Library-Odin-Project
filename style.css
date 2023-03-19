@@ -1,0 +1,210 @@
+/*colors : light yellow 2 : #FFFF99;
+
+
+
+*/
+
+:root {
+  --header: #faedcd;
+  --background: #fefae0;
+  --button: #ccd5ae;
+  --item: #e9edc9;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Open Sans';
+  margin: 0;
+  padding: 0;
+  background: var(--background);
+  font-size: 18px;
+  font-weight: 500;
+  word-wrap: break-word;
+  margin-bottom: 100px;
+  color: #050505;
+}
+
+.header {
+  font-size: 24px;
+  background-color: var(--header);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header h1 {
+  font-weight: bolder;
+  margin: 10px;
+}
+
+.addBook {
+  margin-top: 15px;
+  width: 150px;
+  height: 50px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  background: var(--button);
+  transition: all 0.5s;
+  padding: 10px 15px;
+}
+
+.main-container {
+  margin-top: 20px;
+  text-align: center;
+  max-width: 1200px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.addBook:hover {
+  transition: all 0.5s;
+  transform: scale(1.1);
+}
+
+.library--grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.book-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 20px;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #e9edc9;
+  line-height: 1.2;
+}
+
+.book-item p {
+  margin: 0;
+  padding: 0;
+}
+
+.button-itens {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.read-button {
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  outline: none;
+  width: 50%;
+}
+
+.remove-button {
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  outline: none;
+  width: 50%;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px;
+}
+
+.modal {
+  position: fixed;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #e9edc9;
+  text-align: center;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 0.2s ease-in-out;
+}
+
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.bookForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.input {
+  cursor: text;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  color: inherit;
+  background-color: var(--background);
+  font-family: inherit;
+  font-size: inherit;
+  outline: none;
+  font-weight: inherit;
+}
+
+.submit-button {
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  outline: none;
+  width: 50%;
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  margin-top: 4px;
+  accent-color: white;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.overlay.active {
+  display: block;
+}
